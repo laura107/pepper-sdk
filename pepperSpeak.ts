@@ -4,9 +4,9 @@ import fs from 'fs';
 
 const ssh = new NodeSSH();
 
-const pepperIP = '172.20.10.2';
-const pepperUser = 'nao';
-const privateKey = fs.readFileSync('/home/ideas/.ssh/pepper_rsa', 'utf8');
+const pepperIP = '192.168.0.0'; //replace with Pepper's IP
+const pepperUser = 'nao'; //check username
+const privateKey = fs.readFileSync('/home/ideas/.ssh/pepper_rsa', 'utf8'); //set private key for pepper
 
 export async function sayOnPepper(message: string): Promise<void> {
   try {
