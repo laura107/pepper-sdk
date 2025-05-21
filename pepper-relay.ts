@@ -7,9 +7,9 @@ const ssh = new NodeSSH();
 const app = express();
 const port = 3000;
 
-const pepperIP: string = '172.20.10.2';
-const pepperUser: string = 'nao';
-const privateKeyPath: string = '/home/ideas/.ssh/pepper_rsa';
+const pepperIP: string = '192.168.0.0'; //replace with Pepper IP address
+const pepperUser: string = 'nao'; //check pepper username
+const privateKeyPath: string = '/home/ideas/.ssh/pepper_rsa'; //set own ssh key
 
 async function sayOnPepper(text: string): Promise<string> {
   try {
